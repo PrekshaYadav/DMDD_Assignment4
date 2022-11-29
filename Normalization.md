@@ -20,7 +20,7 @@ Hence the tables in the database are in 1NF.
 
 Hence the table in in 2nd Normal Form.
 
-## #rd Normal Form :
+## Third Normal Form :
 - The table qualifies to be in the second normal form.
 - There are no transitive dependencies.
 
