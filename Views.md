@@ -173,69 +173,70 @@ Select * from University;
 
 ## Preksha
 
-1. What are the top 10 universities for a particular course? 
+1.  What are the top 10 universities for a particular course? 
 
     Database does not have details of course name .
 
-2. What are the top 3 universities in a state? 
+2.  What are the top 3 universities in a state? 
 
     Database does not have a state name.
 
-3. What is the acceptance rate of the university ? 
+3.  What is the acceptance rate of the university ? 
 
-      Create View UniAccRate As Select university_name, chance_of_admit from university where university_name = 'Northeastern University';
+        Create View UniAccRate As Select university_name, chance_of_admit from university where university_name = 'Northeastern University';
 
-      `Select * from UniAccRate`
+    `Select * from UniAccRate`
+    
 
-4. What is the placement rate of the university ? 
+4.  What is the placement rate of the university ? 
 
-      Create View UniPlacementRate As Select university_name, alumni_employement from University left join Standards on University.university_id = Standards.university_id;
+        Create View UniPlacementRate As Select university_name, alumni_employement from University left join Standards on University.university_id = Standards.university_id;
 
-      `Select * from UniPlacementRate`
+    `Select * from UniPlacementRate`
       
 
-5.What is the financial aid of the university? 
-    
+5.  What is the financial aid of the university?
+
     Database does not have a financial  aid
 
-6.What are the top universities for TOEFL scores less than 100? 
+6.  What are the top universities for TOEFL scores less than 100? 
 
-      Create View UniTopTOEFL As Select university_name, TOEFL, national_rank from University left join Requirements on University.university_id = Requirements.university_id order by national_rank;
+        Create View UniTopTOEFL As Select university_name, TOEFL, national_rank from University left join Requirements on University.university_id = Requirements.university_id order by national_rank;
 
-      `Select * from UniTopTOEFL`
+    `Select * from UniTopTOEFL`
       
 
-7.What is the minimum score required in GRE, TOEFL . 
+7.  What is the minimum score required in GRE, TOEFL . 
 
-      Create View GRETOEFL_MinScore As Select university_name, min(GRE), min(TOEFL) from University left join Requirements on University.university_id = Requirements.university_id;
+        Create View GRETOEFL_MinScore As Select university_name, min(GRE), min(TOEFL) from University left join Requirements on University.university_id = Requirements.university_id;
 
-      `Select * from GRETOEFL_MinScore`
+    `Select * from GRETOEFL_MinScore`
       
 
-8.What is the average GPA required for a university? 
+8.  What is the average GPA required for a university? 
 
-      Create View UniAvgGPA As Select university_name, avg(CGPA) from  University left join Requirements on University.university_id = Requirements.university_id;
+        Create View UniAvgGPA As Select university_name, avg(CGPA) from  University left join Requirements on University.university_id = Requirements.university_id;
 
-      `Select * from UniAvgGPA`
+    `Select * from UniAvgGPA`
 
 
-9.Are there any scholarships available for international students ? 
+9.  Are there any scholarships available for international students ? 
 
     Scholarship details are not included in the database.
 
-10.What are the chances of getting an admit in the university based of the students profile? 
+10. What are the chances of getting an admit in the university based of the students profile? 
 
-      Create View UniCGA As Select University_name, chance_of_admit from University left join Requirements on University.university_id = Requirements.university_id where GRE = 320 AND TOEFL = 104 AND university_name = 'Northeastern University';
+        Create View UniCGA As Select University_name, chance_of_admit from University left join Requirements on University.university_id = Requirements.university_id where GRE = 320 AND TOEFL = 104 AND university_name = 'Northeastern University';
 
-      `Select * from UniCGA`
+    `Select * from UniCGA`
       
 ## Somesh
 
 1.  Search for universities which ranks between top 20-30.
 
-      Create View UniRankBetween As Select University_name, national_rank from University where national_rank BETWEEN 20 and 30;
+        Create View UniRankBetween As Select University_name, national_rank from University where national_rank BETWEEN 20 and 30;
 
-     `Select * from UniRankBetween`
+    `Select * from UniRankBetween`
       
 
 2.  View the universities which has CGPA cutoff of 3.5 and above.
@@ -249,16 +250,16 @@ Select * from University;
 
     The dataset does not have details of IELTS.
 
-      Create View UniMinTOEFL As Select University.University_Id, University_Name, GRE, TOEFL from University left join Requirements On University.University_Id = Requirements.University_Id where TOEFL >= 100;
+        Create View UniMinTOEFL As Select University.University_Id, University_Name, GRE, TOEFL from University left join Requirements On University.University_Id = Requirements.University_Id where TOEFL >= 100;
 
-     `Select * from UniMinTOEFL`
+    `Select * from UniMinTOEFL`
       
 
 4.  What is the acceptance rate of students with a CGPA > = 7?
 
-      Create View AccRateWithCGPA As Select University.University_Id, university_name, Chance_of_Admit from University left join requirements on University.University_ID = Requirements.University_ID where CGPA >= 7;
+        Create View AccRateWithCGPA As Select University.University_Id, university_name, Chance_of_Admit from University left join requirements on University.University_ID = Requirements.University_ID where CGPA >= 7;
 
-     `Select * from AccRateWithCGPA`
+    `Select * from AccRateWithCGPA`
       
 
 
