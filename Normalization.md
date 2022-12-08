@@ -11,7 +11,7 @@ Our database contains 3 tables University, Requirements and Standards
 - All the columns of all the tables are atomic.
 - All the columns store distinct information and contribute to the dataset in it's own unique way.
 
-Hence the tables in the database are in 1NF.
+Hence the tables are in the database are in 1NF.
 
 ## Second Normal Form (2NF) :
 - The table qualifies to be in the first normal form.
