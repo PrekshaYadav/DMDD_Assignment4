@@ -241,7 +241,7 @@ Select * from University;
 
 2.  View the universities which has CGPA cutoff of 3.5 and above.
 
-      Create View UniCGPACutoff As Select University.University_Id, university_name from University left join Requirements on  University.university_id = Requirements.university_id where CGPA >= 3.5;
+        Create View UniCGPACutoff As Select University.University_Id, university_name from University left join Requirements on  University.university_id = Requirements.university_id where CGPA >= 3.5;
 
      `Select * from UniCGPACutoff`
       
