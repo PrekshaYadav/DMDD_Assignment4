@@ -230,34 +230,35 @@ Select * from University;
       `Select * from UniCGA`
       
 ## Somesh
-1.Search for universities which ranks between top 20-30.
+
+1.  Search for universities which ranks between top 20-30.
 
       Create View UniRankBetween As Select University_name, national_rank from University where national_rank BETWEEN 20 and 30;
 
-      `Select * from UniRankBetween`
+     `Select * from UniRankBetween`
       
 
-2.View the universities which has CGPA cutoff of 3.5 and above.
+2.  View the universities which has CGPA cutoff of 3.5 and above.
 
       Create View UniCGPACutoff As Select University.University_Id, university_name from University left join Requirements on  University.university_id = Requirements.university_id where CGPA >= 3.5;
 
-      `Select * from UniCGPACutoff`
+     `Select * from UniCGPACutoff`
       
 
-3.Which universities require a minimum score of 7 bands in IELTS and TOEFL > = 100?
+3.  Which universities require a minimum score of 7 bands in IELTS and TOEFL > = 100?
 
     The dataset does not have details of IELTS.
 
       Create View UniMinTOEFL As Select University.University_Id, University_Name, GRE, TOEFL from University left join Requirements On University.University_Id = Requirements.University_Id where TOEFL >= 100;
 
-      `Select * from UniMinTOEFL`
+     `Select * from UniMinTOEFL`
       
 
-4.What is the acceptance rate of students with a CGPA > = 7?
+4.  What is the acceptance rate of students with a CGPA > = 7?
 
       Create View AccRateWithCGPA As Select University.University_Id, university_name, Chance_of_Admit from University left join requirements on University.University_ID = Requirements.University_ID where CGPA >= 7;
 
-      `Select * from AccRateWithCGPA`
+     `Select * from AccRateWithCGPA`
       
 
 
