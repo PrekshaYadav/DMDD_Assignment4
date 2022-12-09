@@ -2,10 +2,12 @@
 
 ## Assignment 3 Use-Cases:
 
-
 Select * from Standards;
+
 Select * from Requirements;
+
 Select * from University;
+
 
 1.  Top 5 USA universities.
 
@@ -13,7 +15,7 @@ Select * from University;
     
     `Select * from TopFiveUni`
 
-2.  Top 5 uni that provides best education.
+2.  Top 5 universities that provides best education.
 
         Create View BestEdu As select university.university_name, standards.Quality_of_Education from University left join Standards on university.university_ID = standards.university_ID order by standards.quality_of_education limit 5;
 
@@ -33,42 +35,42 @@ Select * from University;
     `Select * from UniversityRating_Qof`
 
 
-5.  Count the no of uni with distinct uni ratings.
+5.  Count the number of universities with distinct university ratings.
 
         Create View DistinctUniRating As Select University_rating, Count(University_Name) as No_of_Universities from university group by University_rating order by University_rating;
 
     `Select * from DistinctUniRating`
 
 
-6.  Univ that does not require research
+6.  Universities that does not require research
 
         Create View UniWithoutRearch As Select University_name from University left join requirements on University.University_ID = Requirements.University_ID where research = 0;
 
     `Select * from UniWithoutRearch`
 
 
-7.  Univs that are best fit for a student with GRE score 315 and TOEFL score 110.
+7.  Universities that are best fit for a student with GRE score 315 and TOEFL score 110.
 
         Create View BestFit As Select University.University_Id, University_Name, GRE, TOEFL from University left join Requirements On University.University_Id = Requirements.University_Id where GRE between 310 and 316 AND TOEFL between 105 and 112;
 
     `Select * from BestFit`
 
 
-8.  Should a student with GRE score "321" apply to Northeastern University 
+8.  Should a student with GRE score "321" apply to Northeastern University?
 
         Create View NEU_GRE As select University_name, GRE, case when GRE < 321 then 'YES' else 'NO' End as Decision From University left join requirements on University.University_ID = Requirements.University_ID where University_name = 'Northeastern University';
 
     `Select * from NEU_GRE`
 
 
-9.  What are the pre requisites to apply to NEU
+9.  What are the pre requisites to apply to Northeastern University?
 
         Create View PreReq_NEU As Select University.University_ID, University_name, academic_year, score, gre, toefl, sop, lor, cgpa, research from University right join Requirements on University.University_ID = requirements.University_ID where University_name = 'Northeastern University';
 
     `Select * from PreReq_NEU`
 
 
-10. Number of students employed from university of Oklahoma
+10. Number of students employed from university of Oklahoma.
 
         Create View UOO As Select University.University_ID, University_name, Alumni_Employement from University inner join Standards on standards.University_ID = University.University_ID where University_name = 'University of Oklahoma - Norman Campus'
 
@@ -138,7 +140,6 @@ Select * from University;
         Create View UniGREScore As Select University.university_ID, University_name, GRE from university right join requirements on University.university_Id = Requirements.University_ID where GRE < 320
 
     `Select * from UniGREScore`
-
 
 6.  What are the total number of international students registered in the university? 
 
@@ -253,6 +254,49 @@ Select * from University;
         Create View AccRateWithCGPA As Select University.University_Id, university_name, Chance_of_Admit from University left join requirements on University.University_ID = Requirements.University_ID where CGPA >= 7;
 
     `Select * from AccRateWithCGPA`
-      
 
+
+5.  View the universities which offer course of “Computer science and engineering”.
+
+    The dataset does not have details of courses.
+
+6.  View the course which has requirements of IELTS<7.0 band.
+
+    The dataset does not have details of courses.
+
+7.  View the twitter username for the tweets related to Princeton University.
+
+    The dataset does not have a details of twitter scap data.
+
+8.  Which universities have a higher acceptance rate and a lower graduation rate?
+
+    The dataset does not have details of graduation rate.
+
+9.  Which universities have a high intake of international students in fall 2022?
+
+    The dataset does not have details of intake of international students.
+
+10. Determine which university is in a developed location and has a vast job market (city or rural).
+
+    No such information present in the dataset.
+
+11. How many universities have a high graduation rate in 2021?
+
+    The dataset does not have details of graduation rate.
+
+12. Which universities have IVY league status and view acceptance rate?
+
+    The dataset does not have details of IVY league status.
+ 
+13. Determine which universities have GRE requirements such as Verbal > = 155, Quants > = 160, and AWA > = 3.
+
+    All the universities in the dataset have combined GRE score requirement.
+    
+14. What is the most popular course of study in the top 10–20 universities?
+
+    The dataset does not have a details of courses.
+
+15. Which of the following private universities doesn’t have GRE or English proficiency exam requirements for application?
+
+    All the universities in the dataset have combined GRE and IELTS/TOEFL requirement.
 
