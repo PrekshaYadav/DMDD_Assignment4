@@ -31,7 +31,8 @@ Hence the tables in the database are in 1NF.
 
 •	The table qualifies to be in the first normal form.
 
-•	No columns in all the tables are dependent on each other and hence there is not partial dependency in the dataset. The columns in the tables are not retrieved from any of the other column
+•	No columns in all the tables are dependent on each other and hence there is not partial dependency in the dataset. The columns in the tables are not retrieved from any of the other column.
+
 •	University table :- University_name, Chance_of_Admit, university_rating etc are not dependent on each other.
 
 ![Class Diagram](images/2nf1.jpg)
@@ -45,6 +46,7 @@ Hence the tables in the database are in 1NF.
 ![Class Diagram](images/2nf3.jpg)
 
 •	The values of any column from all the table cannot be retrieved from any other column.
+
 •	Hence the tables in the database are in 2NF.
 
 ## Third Normal Form (3NF):.
