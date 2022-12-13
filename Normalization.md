@@ -8,7 +8,7 @@ University
 Requirements
 ![Class Diagram](images/Standards.jpg)
 
-Standards 
+Standards
 ![Class Diagram](images/Requirements.jpg)
 
 ## First Normal Form (1NF) :
