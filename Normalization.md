@@ -2,8 +2,13 @@
 
 Our database contains 3 tables University, Requirements and Standards 
 
+University
 ![Class Diagram](images/University.jpg)
+
+Requirements
 ![Class Diagram](images/Standards.jpg)
+
+Standards 
 ![Class Diagram](images/Requirements.jpg)
 
 ## First Normal Form (1NF) :
