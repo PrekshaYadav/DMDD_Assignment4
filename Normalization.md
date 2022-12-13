@@ -23,6 +23,7 @@ All the columns store distinct information and contribute to the dataset in its 
 And hence all the tables are now in 1NF
 
 ![Class Diagram](images/Picture1.jpg)
+
 ![Class Diagram](images/primary_key.jpg)
 
 Hence the tables in the database are in 1NF.
