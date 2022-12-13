@@ -2,16 +2,14 @@
 
 Our database contains 3 tables University, Requirements and Standards 
 
-University
 ![Class Diagram](images/University.jpg)
 
-Requirements
 ![Class Diagram](images/Standards.jpg)
 
-Standards
 ![Class Diagram](images/Requirements.jpg)
 
 ## First Normal Form (1NF) :
+
 University table has a primary key on University_Id but the other two tables : Standards and Requirements do have primary key and hence are not in 1NF. 
 
 We have created a column in Standards table name Standard_ID and Requirement_ID in Requirements table.
@@ -30,7 +28,9 @@ And hence all the tables are now in 1NF
 Hence the tables in the database are in 1NF.
 
 ## Second Normal Form (1NF) :
+
 •	The table qualifies to be in the first normal form.
+
 •	No columns in all the tables are dependent on each other and hence there is not partial dependency in the dataset. The columns in the tables are not retrieved from any of the other column
 •	University table :- University_name, Chance_of_Admit, university_rating etc are not dependent on each other.
 
@@ -49,6 +49,7 @@ Hence the tables in the database are in 1NF.
 
 ## Third Normal Form (3NF):.
 •	The table qualifies to be in the second normal form.
+
 •	Transitive dependency: A transitive dependency in a database is an indirect relationship between values in the same table that causes a functional dependency
 
 In our database, 
