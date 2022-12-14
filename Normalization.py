@@ -161,7 +161,7 @@ requirements = ds[["Serial No","Academic_Year", "Score", "GRE Score", "TOEFL Sco
 
 mydb = mysql.connector.connect(host="localhost", user="root", password="Sh_reyasi03")
 mycursor = mydb.cursor()
-mycursor.execute("Use assignment3")
+mycursor.execute("Use assignment4")
 
 #user_val = ("2", "abc", "USA", "1", "1")
 university_sql = "INSERT INTO University(University_ID, University_Name, Country, National_Rank, University_Rating, Chance_of_Admit)VALUES (%s, %s, %s, %s, %s, %s)"
