@@ -23,26 +23,3 @@
 4.	Refer to DMDD_Assignment4/Normalization.md file for 1NF, 2NF and 3NF checks.
 5.	Refer to DMDD_Assignment4/Views.md file and DMDD_Assignment4/Assignment-4 Normalization.sql file for views we created for previous use cases and SQL queries for         those cases which can be implemented in Assignment-4.
 
-## First normal form (1NF)
-
-•	Each table has a primary key University_Id.
-
-•	The values in each column of a table are atomic (No multi-value attributes).
-
-•	There are no repeating groups: two columns do not store similar information in the same table.
-
-## Second normal form (2NF)
-
-•	All requirements in 1st NF have been met.
-
-•	No partial dependencies.
-
-•	No calculated data
-
-## Third normal form (3NF)
-
-•	All requirements in 2nd NF have been met.
-
-•	Eliminated fields that do not directly depend on the primary key i.e no transitive dependencies.
-
-
